@@ -1,0 +1,59 @@
+<div class="main-container">
+  <div class="post-list">
+    <% posts.forEach(function(post) { %>
+    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
+      <% if (themeConfig.showFeatureImage && post.feature) { %>
+      <a href="<%= post.link %>" class="title-img">
+        <amp-img class="contain" src="<%= post.feature %>" layout="fill" alt="<%= post.title %>"></amp-img>
+      </a>
+      <% } %>
+
+      <div class="post-info">
+        <% if (post.tags[0]) { %>
+        <div class="flex-box meta-category">
+          <a class="post-cate" href="<%= post.tags[0].link %>"><%= post.tags[0].name %></a></div>
+        <% }; %>
+        <h2 class="post-title">
+          <a href="<%= post.link %>"><%= post.title %></a>
+        </h2>
+        <div class="post-excerpt">
+          <%- post.abstract %>
+        </div>
+        <div class="flex-box justify-between">
+          <a href="<%= post.link %>" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
+          <div class="flex-box post-meta-box">
+            <a class="post-meta" href="<%= post.link %>#comments"><span class="iconfont icon-mr-postmeta"></span></a>
+            <a class="post-meta" href="<%= post.link %>"><span class="iconfont icon-mr-postmeta"></span></a>
+            <a class="post-meta" href="<%= post.link %>"><span
+                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
+          </div>
+          <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+
+          <div class="flex-box post-publish-date">
+            <% years.forEach(function(year) { %>
+            <div class="post-date">
+              <%- year %></div>
+            <% }); %>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+    <% }); %>
+
+  </div>
+  <div>
+    <nav class="navigation pagination" role="navigation" aria-label="文章">
+      <h2 class="screen-reader-text">文章导航</h2>
+      <div class="nav-links">
+        <% if (pagination.prev) { %>
+        <a class="page-numbers" href="<%= pagination.prev %>">&nbsp&nbsp上一页&nbsp&nbsp</a>
+        <% } %>
+        <% if (pagination.next) { %>
+        <a class="page-numbers" href="<%= pagination.next %>">&nbsp&nbsp下一页&nbsp&nbsp</a>
+        <% } %>
+      </div>
+    </nav>
+  </div>
+</div>

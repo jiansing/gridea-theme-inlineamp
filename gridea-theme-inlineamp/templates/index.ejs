@@ -1,0 +1,26 @@
+<!doctype html>
+<html amp lang="<%= site.customConfig.lang %>">
+
+<head>
+  <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+
+</head>
+
+<body class="home blog">
+  <input type="checkbox" id="header-menu-button">
+  <%- include('./includes/header') %>
+
+  <main>
+    <%- include('./includes/post-list') %>
+    <%- include('./includes/sidebar') %>
+    <%- include('./includes/scrolltop') %>
+
+    
+  </main>
+
+  <%- include('./includes/footer') %>
+
+
+</body>
+
+</html>

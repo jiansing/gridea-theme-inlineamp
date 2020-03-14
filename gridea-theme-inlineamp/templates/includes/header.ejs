@@ -1,0 +1,26 @@
+<header id="commonTop">
+  <div class="top-container">
+    <div class="title-menus-area">
+      <a class="blog-title" href="<%= themeConfig.domain %>"><%= themeConfig.siteName %></a>
+      <label for="header-menu-button" class="top-menus">
+        <nav class="menu-menu-1-container">
+          <ul id="menu-menu-1" class="menu">
+            <% menus.forEach(function(menu) { %>
+            <% if (menu.openType === 'External') { %>
+            <li>
+              <a href="<%= menu.link %>" aria-current="page"><%= menu.name %></a></li>
+            <% } else { %>
+            <li>
+              <a href="<%= menu.link %>" aria-current="page"><%= menu.name %></a></li>
+            <% } %>
+            <% }); %>
+          </ul>
+        </nav>
+      </label>
+    </div>
+    <div class="tagline">
+      <div class="tagline-main"><%= site.customConfig.taglinemain %></div>
+      <div class="tagline-sub"><%= site.customConfig.taglinesub %></div>
+    </div>
+  </div>
+</header>

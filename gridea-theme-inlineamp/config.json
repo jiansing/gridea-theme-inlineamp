@@ -1,0 +1,61 @@
+{
+  "name": "InlineAMP",
+  "version": "1.0.0",
+  "author": "Jiansing",
+  "customConfig": [
+    {
+      "name": "taglinemain",
+      "label": "主标语",
+      "group": "顶部标语区域",
+      "value": "",
+      "type": "input",
+      "note": "将展示在每个页面顶部"
+    },
+    {
+      "name": "taglinesub",
+      "label": "副标语",
+      "group": "顶部标语区域",
+      "value": "",
+      "type": "input",
+      "note": "将展示在每个页面顶部"
+    },
+    {
+      "name": "avatar",
+      "label": "作者",
+      "group": "个人信息",
+      "value": "作者",
+      "type": "input",
+      "note": "要怎么称呼您?"
+    },
+
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "ga",
+      "label": "跟踪 ID",
+      "group": "Google Analytics",
+      "value": "",
+      "type": "input",
+      "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "lang",
+      "label": "<html> lang属性,默认设置为简体中文(zh-Hans)",
+      "group": "语言",
+      "value": "zh-Hans",
+      "type": "input",
+      "note": "默认设置为简体中文"
+    }
+
+  ]
+}

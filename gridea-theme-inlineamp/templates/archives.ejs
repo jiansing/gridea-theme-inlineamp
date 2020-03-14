@@ -1,0 +1,55 @@
+<!doctype html>
+<html amp lang="<%= site.customConfig.lang %>">
+
+  <head>
+    <%- include('./includes/head', { siteTitle: themeConfig.siteName }) %>
+  </head>
+
+<body class="home blog">
+  <input type="checkbox" id="header-menu-button">
+  <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+
+  <header id="commonTop">
+    <div class="top-container">
+      <div class="title-menus-area">
+        <a class="blog-title" href="<%= themeConfig.domain %>"><%= themeConfig.siteName %></a>
+        <label for="header-menu-button" class="top-menus">
+          <nav class="menu-menu-1-container">
+            <ul id="menu-menu-1" class="menu">
+              <% menus.forEach(function(menu) { %>
+              <% if (menu.openType === 'External') { %>
+              <li>
+                <a href="<%= menu.link %>" aria-current="page"><%= menu.name %></a></li>
+              <% } else { %>
+              <li>
+                <a href="<%= menu.link %>" aria-current="page"><%= menu.name %></a></li>
+              <% } %>
+              <% }); %>
+            </ul>
+          </nav>
+        </label>
+      </div>
+      <div class="tagline">
+        <% years.forEach(function(year) { %>
+          <div class="tagline-main">年份：<%- year %></div>
+          <% }); %>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+
+    <%- include('./includes/post-list') %>
+    <%- include('./includes/sidebar') %>
+    <%- include('./includes/scrolltop') %>
+
+    
+  </main>
+
+  <%- include('./includes/footer') %>
+
+
+</body>
+
+</html>

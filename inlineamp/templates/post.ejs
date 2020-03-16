@@ -1,0 +1,92 @@
+<!doctype html>
+<html amp lang="<%= site.customConfig.lang %>">
+
+<head>
+  <%- include('./includes/post-head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
+  <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+    <% if (commentSetting.commentPlatform === 'disqus') { %>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  <% } %>
+  <% } %>
+  <% if (site.customConfig.count) { %><script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+  <% } %>
+
+
+</head>
+
+<body>
+  <input type="checkbox" id="header-menu-button">
+  <%- include('./includes/header') %>
+  <main>
+    <div class="main-container">
+
+      <div class="article-info">
+        <% if (post.tags[0]) { %>
+          <div class="flex-box meta-category">
+            <a class="post-cate" href="<%= post.tags[0].link %>"><%= post.tags[0].name %></a></div>
+          <% }; %>
+        <h2 class="article-title">
+          <a href="<%= post.link %>"><%= post.title %></a>
+        </h2>
+        <div class="flex-box">
+          <div class="flex-box post-meta-box">
+            <a class="post-meta" href="<%= themeConfig.domain %>"><span
+                class="iconfont icon-mr-postmeta"></span><%= site.customConfig.avatar %></a>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span><%= post.dateFormat %></span>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <%- post.content %>
+      </div>
+
+      <% if (post.nextPost && !post.hideInList) { %>
+      <nav class="post-nav">
+        <% if (post.prevPost) { %>
+        <div class="nav-previous">
+          <a class="post-nav-link-active" title="<%= post.prevPost.title %>" href="<%= post.prevPost.link %>">上一篇文章</a>
+        </div>
+        <% } %>
+        <% if (post.nextPost) { %>
+        <div class="nav-next">
+          <a class="post-nav-link-active" title="<%= post.nextPost.title %>" href="<%= post.nextPost.link %>">下一篇文章</a>
+          <% } %>
+
+        </div>
+      </nav>
+      <% } %>
+
+      <% if (site.customConfig.socialshare) { %>
+      <%- include('./includes/share') %>
+      <% } %>
+
+
+      <% if (site.customConfig.count) { %>
+        <amp-script layout="container" script="dsq-count-scr">
+        <!-- <span class="post-meta"> -->
+          <!-- <span class="iconfont icon-mr-postmeta"></span>  -->
+          <a href="#disqus_thread" data-disqus-identifier="<%= post.link %>"></a>
+              <!-- <span class="disqus-comment-count" data-disqus-url="<%= post.link %>" data-disqus-identifier="<%= post.link %>"></span> -->
+        <!-- </span> -->
+      </amp-script>
+
+        <% } %>
+
+      <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+        <% if (commentSetting.commentPlatform === 'disqus') { %>
+          <%- include('./includes/disqus') %>
+          <% } %>
+      <% } %>
+    </div>
+
+    <%- include('./includes/post-sidebar') %>
+    <%- include('./includes/scrolltop') %>
+  </main>
+  <%- include('./includes/footer') %>
+
+  <% if (site.customConfig.count) { %>
+    <script id="dsq-count-scr" src="//<%= site.customConfig.disqusdomain %>.disqus.com/count.js" target="amp-script" async></script>
+    <% } %>
+</body>
+
+</html>

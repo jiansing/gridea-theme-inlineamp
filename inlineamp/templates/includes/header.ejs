@@ -18,9 +18,11 @@
         </nav>
       </label>
     </div>
+    <% if (site.customConfig.tagline) { %>
     <div class="tagline">
       <div class="tagline-main"><%= site.customConfig.taglinemain %></div>
       <div class="tagline-sub"><%= site.customConfig.taglinesub %></div>
     </div>
+    <% } %>
   </div>
 </header>

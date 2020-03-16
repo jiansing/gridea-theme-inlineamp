@@ -13,12 +13,18 @@
       </div>
     </div>
   </aside>
-  <aside id="search-10" class="widget widget_search">
-    <form target="_top" role="search" method="get" class="search-form" action="//hhacker.com/">
-      <input required type="text" class="search-field" placeholder="搜索…" value="" name="s"><button type="submit"
-        class="search-submit"></button>
-    </form>
-  </aside>
+  <% if (site.customConfig.search) { %>
+    <aside id="search-10" class="widget widget_search">
+      <form target="_top" role="search" method=get class="search-form" action="https://www.google.com/search">
+        <input type=hidden name=domains value="<%= themeConfig.domain %>">
+        <input type=hidden name=sitesearch value="<%= themeConfig.domain %>">
+        <input name="hl" value="zh-CN" type="hidden">
+        <input required type="text" class="search-field" placeholder="搜索…" name="q">
+        <button type="submit"
+          class="search-submit"></button>
+      </form>
+    </aside>
+    <% } %>
   <aside id="categories-2" class="widget widget_categories">
     <h4 class="widget-title">分类目录</h4>
     <ul>
@@ -37,17 +43,17 @@
     </ul>
   </aside>
 
-  <% if (site.customConfig.friends) { %>
-    <% site.customConfig.friends.forEach(function(friend) { %>
+
   <aside id="linkcat-2" class="widget widget_links">
   <h4 class="widget-title">友链</h4>
   <ul class="xoxo blogroll">
-    
+    <% if (site.customConfig.friends) { %>
+      <% site.customConfig.friends.forEach(function(friend) { %>
     <li><a href="<%= friend.siteLink %>" target="_blank"><%= friend.siteName %></a></li>
-
+    <% }); %>
+    <% } %>
   </ul>
 </aside>
-<% }); %>
-<% } %>
+
 
 </div>

@@ -5,19 +5,21 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 
 仓库下载：https://github.com/jiansing/gridea-theme-inlineamp
 
+## v1.2.0-beta.0 updated 2020.３.22
+
+1. 添加AddThis分享组件
+2. 添加Facebook评论
+3. 添加百度统计
+4. 添加自定义AMP JS
+5. 字体改为CDN加载
+
 ## v1.1.0 updated 2020.３.16
-新增Disqus评论支持
-
-新增Google站内搜索
-
-顶部标语可以自定义是否展示
-
-可以按需加载JS
-
-修复了多条友链显示不正常的Bug
-
-修复了文章页不显示分类目录(即标签)的Bug
-
+1. 新增Disqus评论支持
+2. 新增Google站内搜索
+3. 顶部标语可以自定义是否展示
+4. 可以按需加载JS
+5. 修复了多条友链显示不正常的Bug
+6. 修复了文章页不显示分类目录(即标签)的Bug
 
 
 移植于wordpress的同名主题 InlineAMP 。（[原主题Github](https://github.com/justid/InlineAMP)）

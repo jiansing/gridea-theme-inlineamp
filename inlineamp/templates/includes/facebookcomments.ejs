@@ -1,0 +1,19 @@
+<amp-facebook-comments
+  width="600"
+  height="200"
+  layout="responsive"
+  <% if (site.customConfig.facebookcommentsnumposts) { %>
+    data-numposts="<%= site.customConfig.facebookcommentsnumposts %>"
+    <% } %>
+    <% if (site.customConfig.facebookcommentslanguage) { %>
+    data-locale="<%= site.customConfig.facebookcommentslanguage %>"
+    <% } %>
+    <% if (site.customConfig.facebookcommentscolorscheme) { %>
+    data-colorscheme="dark"
+    <% } %>
+    <% if (site.customConfig.facebookcommentstime) { %>
+    data-order-by="time"
+    <% } %>
+  data-href="<%= post.link %>"
+>
+</amp-facebook-comments>

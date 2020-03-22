@@ -48,7 +48,22 @@
   </main>
 
   <%- include('./includes/footer') %>
-
+  <% if (site.customConfig.socialshare === 'addthis') { %>
+    <% if (site.customConfig.addthisdatawidgettype === 'globalfloating') { %>
+      <amp-addthis
+      width="320"
+      height="92"
+      layout="responsive"
+      data-pub-id="<%= site.customConfig.addthisdatapubid %>"
+      data-widget-id="<%= site.customConfig.addthisdatawidgetid %>"
+      data-widget-type="floating"
+      data-title="<%= themeConfig.siteName %>"
+      data-url="<%= themeConfig.domain %>"
+      data-description="<%- site.customConfig.metaDescription || themeConfig.siteDescription %>"
+    >
+    </amp-addthis>
+        <% } %>
+        <% } %>
 
 </body>
 

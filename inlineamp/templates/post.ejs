@@ -3,14 +3,6 @@
 
 <head>
   <%- include('./includes/post-head', { siteTitle: `${post.title} | ${themeConfig.siteName}` }) %>
-  <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-    <% if (commentSetting.commentPlatform === 'disqus') { %>
-  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-  <% } %>
-  <% } %>
-  <% if (site.customConfig.count) { %><script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
-  <% } %>
-
 
 </head>
 
@@ -56,8 +48,30 @@
       </nav>
       <% } %>
 
-      <% if (site.customConfig.socialshare) { %>
+      <% if (site.customConfig.socialshare === 'ampshare') { %>
       <%- include('./includes/share') %>
+      <% } %>
+      <% if (site.customConfig.socialshare === 'addthis') { %>
+        
+  <% if (site.customConfig.addthisdatawidgettype === 'inline') { %>
+    <amp-addthis
+    width="320"
+    height="92"
+    layout="responsive"
+    data-pub-id="<%= site.customConfig.addthisdatapubid %>"
+    data-widget-id="<%= site.customConfig.addthisdatawidgetid %>"
+    data-widget-type="inline"
+    data-title="<%= post.title %>"
+    data-url="<%= post.link %>"
+    data-media="<%= post.feature %>"
+    data-description="<%- post.description %>"
+  >
+  </amp-addthis>
+   <% } %>
+ <% if (site.customConfig.addthisdatawidgettype === 'inline2') { %>
+  
+ <% } %>
+
       <% } %>
 
 
@@ -72,11 +86,15 @@
 
         <% } %>
 
-      <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-        <% if (commentSetting.commentPlatform === 'disqus') { %>
+        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+        <% if (site.customConfig.comments === 'disqus') { %>
           <%- include('./includes/disqus') %>
           <% } %>
-      <% } %>
+          <% if (site.customConfig.comments === 'facebookcomments') { %>
+          <%- include('./includes/facebookcomments') %>
+          <% } %>
+          <% } %>
+
     </div>
 
     <%- include('./includes/post-sidebar') %>
@@ -84,9 +102,45 @@
   </main>
   <%- include('./includes/footer') %>
 
+  <% if (site.customConfig.socialshare === 'addthis') { %>
+
+    <% if (site.customConfig.addthisdatawidgettype === 'floating') { %>
+      <amp-addthis
+      width="320"
+      height="92"
+      layout="responsive"
+      data-pub-id="<%= site.customConfig.addthisdatapubid %>"
+      data-widget-id="<%= site.customConfig.addthisdatawidgetid %>"
+      data-widget-type="floating"
+      data-title="<%= post.title %>"
+      data-url="<%= post.link %>"
+      data-media="<%= post.feature %>"
+      data-description="<%- post.description %>"
+    >
+    </amp-addthis>
+      <% } %>
+      <% if (site.customConfig.addthisdatawidgettype === 'globalfloating') { %>
+        <amp-addthis
+        width="320"
+        height="92"
+        layout="responsive"
+        data-pub-id="<%= site.customConfig.addthisdatapubid %>"
+        data-widget-id="<%= site.customConfig.addthisdatawidgetid %>"
+        data-widget-type="floating"
+        data-title="<%= post.title %>"
+        data-url="<%= post.link %>"
+        data-media="<%= post.feature %>"
+        data-description="<%- post.description %>"
+      >
+      </amp-addthis>
+        <% } %>
+      <% } %>
+
   <% if (site.customConfig.count) { %>
     <script id="dsq-count-scr" src="//<%= site.customConfig.disqusdomain %>.disqus.com/count.js" target="amp-script" async></script>
     <% } %>
+
+
 </body>
 
 </html>

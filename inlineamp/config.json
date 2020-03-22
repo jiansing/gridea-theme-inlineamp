@@ -1,6 +1,6 @@
 {
   "name": "InlineAMP",
-  "version": "1.0.0",
+  "version": "1.2.0-beta.0",
   "author": "Jiansing",
   "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
   "customConfig": [
@@ -31,13 +31,95 @@
     {
       "name": "avatar",
       "label": "作者",
-      "group": "个人信息",
+      "group": "社会化分享",
       "value": "作者",
       "type": "input",
       "note": "要怎么称呼您?"
     },
     {
-      "name": "disqus",
+      "name": "socialshare",
+      "label": "分享组件",
+      "group": "社会化分享",
+      "value": "ampshare",
+      "type": "select",
+      "note": "使用AddThis分享请前往：https://www.addthis.com ，获取AddThis相关属性见：https://amp.dev/zh_cn/documentation/components/amp-addthis/",
+      "options": [
+        {
+          "label": "无",
+          "value": "noshare"
+        },
+        {
+          "label": "amp-social-share",
+          "value": "ampshare"
+        },
+        {
+          "label": "AddThis分享",
+          "value": "addthis"
+        }
+      ]
+    },
+    {
+      "name": "addthisdatapubid",
+      "label": "AddThis 发布商 ID",
+      "group": "社会化分享",
+      "value": "",
+      "type": "input",
+      "note": "用户登录后，AddThis 信息中心的网址中包含的 AddThis 发布商 ID。例如，在网址 https://www.addthis.com/dashboard#gallery/pub/ra-5c191331410932ff 中， ra-5c191331410932ff 为发布商 ID"
+    },
+    {
+      "name": "addthisdatawidgetid",
+      "label": "AddThis 微件 ID",
+      "group": "社会化分享",
+      "value": "",
+      "type": "input",
+      "note": "要显示的工具对应的 AddThis 微件 ID。同样，也可在 AddThis 信息中心找到该 ID。您可以通过以下方式找到特定工具的微件 ID：在 AddThis 信息中心打开特定工具，然后复制网址的最后一部分。例如，在网址 https://www.addthis.com/dashboard#tool-config/pub/ra-5c191331410932ff/widgetId/957l 中， 957l 为微件 ID。"
+    },
+    {
+      "name": "addthisdatawidgettype",
+      "label": "AddThis 微件类型",
+      "group": "社会化分享",
+      "value": "inline",
+      "type": "select",
+      "note": "注意与上面填写的微件 ID 一一对应",
+      "options": [
+        {
+          "label": "悬浮",
+          "value": "floating"
+        },
+        {
+          "label": "内嵌",
+          "value": "inline"
+        },
+        {
+          "label": "手动内嵌",
+          "value": "inline2"
+        },
+        {
+          "label": "全局悬浮",
+          "value": "globalfloating"
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "label": "评论系统",
+      "group": "评论",
+      "value": "disqus",
+      "type": "select",
+      "note": "配置Disqus见：https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/",
+      "options": [
+        {
+          "label": "Disqus",
+          "value": "disqus"
+        },
+        {
+          "label": "Facebook评论",
+          "value": "facebookcomments"
+        }
+      ]
+    },
+    {
+      "name": "disqusurl",
       "label": "Disqus代码URL",
       "group": "评论",
       "value": "",
@@ -59,6 +141,38 @@
       "value": "",
       "type": "input",
       "note": "如开启评论计数请填写"
+    },
+    {
+      "name": "facebookcommentslanguage",
+      "label": "Facebook评论系统语言",
+      "group": "评论",
+      "value": "zh_CN",
+      "type": "input",
+      "note": "（可选）"
+    },
+    {
+      "name": "facebookcommentsnumposts",
+      "label": "Facebook评论默认显示出的评论数量",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "（可选，需为整数）"
+    },
+    {
+      "name": "facebookcommentscolorscheme",
+      "label": "Facebook评论暗黑模式",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "（可选）"
+    },
+    {
+      "name": "facebookcommentstime",
+      "label": "Facebook评论按时间顺序排序",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "（可选，默认按最受欢迎的顺序排列）"
     },
     {
       "name": "friends",
@@ -97,6 +211,14 @@
       "note": "如果需要嵌入音频请开启"
     },
     {
+      "name": "gist",
+      "label": "HTML5 amp-gist标签支持",
+      "group": "可选模块",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要使用GitHub Gist代码高亮请开启"
+    },
+    {
       "name": "bind",
       "label": "amp-bind、amp-mustache支持",
       "group": "可选模块",
@@ -105,12 +227,20 @@
       "note": ""
     },
     {
-      "name": "socialshare",
-      "label": "分享组件",
+      "name": "ampjs",
+      "label": "自定义AMP JS",
       "group": "可选模块",
-      "value": true,
+      "value": "",
+      "type": "input",
+      "note": "如需要嵌入第三方内容请在这里填写所需的AMP JS，AMP组件库：https://amp.dev/zh_cn/documentation/components/"
+    },
+    {
+      "name": "analytics",
+      "label": "开启",
+      "group": "统计",
+      "value": false,
       "type": "switch",
-      "note": "如果需要分享组件请开启"
+      "note": ""
     },
     {
       "name": "ga",
@@ -119,6 +249,14 @@
       "value": "",
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "ba",
+      "label": "百度统计token",
+      "group": "统计",
+      "value": "",
+      "type": "input",
+      "note": ""
     },
     {
       "name": "lang",

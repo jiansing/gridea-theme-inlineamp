@@ -26,21 +26,18 @@
     </aside>
     <% } %>
 
-  <aside id="categories-2" class="widget widget_categories">
-    <h4 class="widget-title">分类目录</h4>
-    <ul>
-      <% post.tags.forEach(function(tag, index) { %>
-      <li class="cat-item"><a href="<%= tag.link %>">
-          <%= tag.name %>
-          <% if (index !== post.tags.length - 1) { %>
-          
-          <% } %>
-        </a>
-      </li>
-      <% }); %>
-
-    </ul>
-  </aside>
+    <aside id="categories-2" class="widget widget_categories">
+      <h4 class="widget-title">标签</h4>
+      <ul>
+          <% site.tags.forEach(function(tag, tagIndex) { %>
+            <li class="cat-item"><a href="<%= tag.link %>">
+            <%= tag.name %>
+          </a>
+          <% }); %>
+        </li>
+  
+      </ul>
+    </aside>
 
 
   <aside id="linkcat-2" class="widget widget_links">

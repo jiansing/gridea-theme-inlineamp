@@ -25,6 +25,22 @@
       </form>
     </aside>
     <% } %>
+    <% if (site.customConfig.latestarticles) { %>
+    <aside id="recent-posts-2" class="widget widget_recent_entries">
+      <h4 class="widget-title">近期文章</h4>
+       <ul>
+        <% site.posts.forEach(function(post, index) { %>
+          <% if (index < 3) { %>
+        <li>
+         <a href="<%= post.link %>" aria-current="page"><%= post.title %></a>
+        </li>
+        <% } %>
+        <% }); %>
+      </ul>
+   </aside>
+   <% } %>
+
+   <% if (site.customConfig.tag) { %>
     <aside id="categories-2" class="widget widget_categories">
       <h4 class="widget-title">标签</h4>
       <ul>
@@ -37,7 +53,7 @@
   
       </ul>
     </aside>
-
+    <% } %>
 
   <aside id="linkcat-2" class="widget widget_links">
   <h4 class="widget-title">友链</h4>

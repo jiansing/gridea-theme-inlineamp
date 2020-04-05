@@ -74,6 +74,12 @@
 
       <% } %>
 
+      <div class="post-tags">
+        <% post.tags.forEach(function(tag, tagIndex) { %>
+        <a href="<%= tag.link %>" rel="tag"><%= tag.name %></a>        
+        <% }); %>       
+      </div>
+
 
       <% if (site.customConfig.count) { %>
         <amp-script layout="container" script="dsq-count-scr">

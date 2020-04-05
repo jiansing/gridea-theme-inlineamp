@@ -1,6 +1,6 @@
 {
   "name": "InlineAMP",
-  "version": "1.2.0-beta.2",
+  "version": "1.2.0-beta.3",
   "author": "Jiansing",
   "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
   "customConfig": [
@@ -187,14 +187,6 @@
       "note": "将显示在侧边栏"
     },
     {
-      "name": "search",
-      "label": "Google站内搜索",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "Google搜索"
-    },
-    {
       "name": "video",
       "label": "HTML5 amp-video标签支持",
       "group": "可选模块",
@@ -235,6 +227,30 @@
       "note": "如需要嵌入第三方内容请在这里填写所需的AMP JS，AMP组件库：https://amp.dev/zh_cn/documentation/components/"
     },
     {
+      "name": "tag",
+      "label": "标签",
+      "group": "侧边栏",
+      "value": true,
+      "type": "switch",
+      "note": "侧边栏显示所有标签"
+    },
+    {
+      "name": "search",
+      "label": "Google站内搜索",
+      "group": "侧边栏",
+      "value": true,
+      "type": "switch",
+      "note": "侧边栏Google搜索小部件"
+    },
+    {
+      "name": "latestarticles",
+      "label": "最近文章",
+      "group": "侧边栏",
+      "value": true,
+      "type": "switch",
+      "note": "显示最近文章"
+    },
+    {
       "name": "analytics",
       "label": "开启",
       "group": "统计",
@@ -265,6 +281,14 @@
       "value": "zh-Hans",
       "type": "input",
       "note": "默认设置为简体中文"
+    },
+    {
+      "name": "test",
+      "label": "test",
+      "group": "实验性功能",
+      "value": true,
+      "type": "switch",
+      "note": "test"
     }
 
   ]

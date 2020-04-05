@@ -5,6 +5,16 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 
 仓库下载：https://github.com/jiansing/gridea-theme-inlineamp
 
+历史版本：https://github.com/jiansing/gridea-theme-inlineamp/releases
+
+## v1.2.0-beta.3 updated 2020.4.5
+
+1. 增加了侧边栏的近期文章显示
+2. 改善了代码高亮显示效果
+3. 改善了文章标签显示效果
+4. 修复了文章标签的显示Bug
+
+
 ## v1.2.0-beta.0 updated 2020.３.22
 
 1. 添加AddThis分享组件

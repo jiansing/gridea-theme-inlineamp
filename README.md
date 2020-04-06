@@ -7,6 +7,15 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 
 历史版本：https://github.com/jiansing/gridea-theme-inlineamp/releases
 
+预览：https://jiansing.github.io/
+
+## 使用指南
+插入图片、视频、音频
+https://jiansing.github.io/include-images-and-video/
+
+添加评论
+https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
+
 ## v1.2.0 updated 2020.4.6
 比较接近原主题的版本
 
@@ -76,18 +85,9 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 ### 语言
 用于设置 html lang 属性，默认设置为简体中文(zh-Hans)，一般用默认设置即可
 
-## 使用指南
-插入图片、视频、音频
-https://blog.ofo.moe/include-images-and-video/
-
-添加评论
-https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/
-
 
 ## 待实现的功能
 
-- 点赞功能
-- 阅读量显示
 - 标签云页面
 - 自定义CSS
 

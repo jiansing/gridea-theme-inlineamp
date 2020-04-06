@@ -27,13 +27,14 @@
             <a class="post-meta" href="<%= post.link %>"><span
                 class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
           </div>
-          <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
 
           <div class="flex-box post-publish-date">
-            <% years.forEach(function(year) { %>
             <div class="post-date">
-              <%- year %></div>
-            <% }); %>
+              <%= site.utils.moment(post.date).format("DD") %>
+            </div>
+            <div class="post-month">
+              <%= site.utils.moment(post.date).locale('zh-cn').format("MMM") %>                            
+            </div>  
           </div>
 
         </div>

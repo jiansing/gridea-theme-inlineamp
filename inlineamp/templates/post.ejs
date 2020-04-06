@@ -24,7 +24,16 @@
           <div class="flex-box post-meta-box">
             <a class="post-meta" href="<%= themeConfig.domain %>"><span
                 class="iconfont icon-mr-postmeta"></span><%= site.customConfig.avatar %></a>
-            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span><%= post.dateFormat %></span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span><%= site.utils.moment(post.date).locale('zh-cn').format("YYYY [年] MM	[月] Do") %></span>
+            <% if (site.customConfig.count) { %>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>
+            <amp-script layout="container" script="dsq-count-scr">
+              <a href="<%= post.link %>#disqus_thread" data-disqus-identifier="<%= post.link %>"></a>
+          </amp-script>
+          </span>
+          <% } %>
+
+
           </div>
         </div>
       </div>

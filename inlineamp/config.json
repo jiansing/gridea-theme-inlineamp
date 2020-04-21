@@ -42,7 +42,7 @@
       "group": "社会化分享",
       "value": "ampshare",
       "type": "select",
-      "note": "使用AddThis分享请前往：https://www.addthis.com ，获取AddThis相关属性见：https://amp.dev/zh_cn/documentation/components/amp-addthis/",
+      "note": "使用 AddThis 分享请前往：https://www.addthis.com ，获取 AddThis 相关属性见：https://amp.dev/zh_cn/documentation/components/amp-addthis/",
       "options": [
         {
           "label": "无",
@@ -53,7 +53,7 @@
           "value": "ampshare"
         },
         {
-          "label": "AddThis分享",
+          "label": "AddThis 分享",
           "value": "addthis"
         }
       ]
@@ -106,25 +106,29 @@
       "group": "评论",
       "value": "disqus",
       "type": "select",
-      "note": "配置Disqus见：https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/",
+      "note": "配置 Disqus 见：https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/",
       "options": [
+        {
+          "label": "utterances 评论（实验性）",
+          "value": "utterances"
+        },
         {
           "label": "Disqus",
           "value": "disqus"
         },
         {
-          "label": "Facebook评论",
+          "label": "Facebook 评论",
           "value": "facebookcomments"
         }
       ]
     },
     {
       "name": "disqusurl",
-      "label": "Disqus代码URL",
+      "label": "Disqus 代码 URL",
       "group": "评论",
       "value": "",
       "type": "input",
-      "note": "该文件不能与blog使用同一域名（可以使用不同的子域名如cdn.example.com）"
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
     },
     {
       "name": "count",
@@ -136,15 +140,23 @@
     },
     {
       "name": "disqusdomain",
-      "label": "Disqus子域",
+      "label": "Disqus 子域",
       "group": "评论",
       "value": "",
       "type": "input",
       "note": "如开启评论计数请填写"
     },
     {
+      "name": "utterancesurl",
+      "label": "utterances 代码 URL（实验性）",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
       "name": "facebookcommentslanguage",
-      "label": "Facebook评论系统语言",
+      "label": "Facebook 评论系统语言",
       "group": "评论",
       "value": "zh_CN",
       "type": "input",
@@ -152,7 +164,7 @@
     },
     {
       "name": "facebookcommentsnumposts",
-      "label": "Facebook评论默认显示出的评论数量",
+      "label": "Facebook 评论默认显示出的评论数量",
       "group": "评论",
       "value": "",
       "type": "input",
@@ -160,7 +172,7 @@
     },
     {
       "name": "facebookcommentscolorscheme",
-      "label": "Facebook评论暗黑模式",
+      "label": "Facebook 评论暗黑模式",
       "group": "评论",
       "value": false,
       "type": "switch",
@@ -168,7 +180,7 @@
     },
     {
       "name": "facebookcommentstime",
-      "label": "Facebook评论按时间顺序排序",
+      "label": "Facebook 评论按时间顺序排序",
       "group": "评论",
       "value": false,
       "type": "switch",
@@ -188,7 +200,7 @@
     },
     {
       "name": "video",
-      "label": "HTML5 amp-video标签支持",
+      "label": "HTML5 amp-video 标签支持",
       "group": "可选模块",
       "value": true,
       "type": "switch",
@@ -196,7 +208,7 @@
     },
     {
       "name": "audio",
-      "label": "HTML5 amp-audio标签支持",
+      "label": "HTML5 amp-audio 标签支持",
       "group": "可选模块",
       "value": true,
       "type": "switch",
@@ -204,15 +216,15 @@
     },
     {
       "name": "gist",
-      "label": "HTML5 amp-gist标签支持",
+      "label": "HTML5 amp-gist 标签支持",
       "group": "可选模块",
       "value": true,
       "type": "switch",
-      "note": "如果需要使用GitHub Gist代码高亮请开启"
+      "note": "如果需要使用 GitHub Gist 代码高亮请开启"
     },
     {
       "name": "bind",
-      "label": "amp-bind、amp-mustache支持",
+      "label": "amp-bind、amp-mustache 支持",
       "group": "可选模块",
       "value": false,
       "type": "switch",
@@ -220,11 +232,11 @@
     },
     {
       "name": "ampjs",
-      "label": "自定义AMP JS",
+      "label": "自定义 AMP JS",
       "group": "可选模块",
       "value": "",
       "type": "input",
-      "note": "如需要嵌入第三方内容请在这里填写所需的AMP JS，AMP组件库：https://amp.dev/zh_cn/documentation/components/"
+      "note": "如需要嵌入第三方内容请在这里填写所需的 AMP JS，AMP 组件库：https://amp.dev/zh_cn/documentation/components/"
     },
     {
       "name": "tag",
@@ -240,7 +252,7 @@
       "group": "侧边栏",
       "value": true,
       "type": "switch",
-      "note": "侧边栏Google搜索小部件"
+      "note": "侧边栏 Google 搜索小部件"
     },
     {
       "name": "latestarticles",
@@ -268,7 +280,7 @@
     },
     {
       "name": "ba",
-      "label": "百度统计token",
+      "label": "百度统计 token",
       "group": "统计",
       "value": "",
       "type": "input",
@@ -276,7 +288,7 @@
     },
     {
       "name": "lang",
-      "label": "<html> lang属性,默认设置为简体中文(zh-Hans)",
+      "label": "<html> lang 属性,默认设置为简体中文(zh-Hans)",
       "group": "语言",
       "value": "zh-Hans",
       "type": "input",

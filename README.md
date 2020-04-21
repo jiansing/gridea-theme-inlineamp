@@ -5,6 +5,40 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 
 仓库下载：https://github.com/jiansing/gridea-theme-inlineamp
 
+历史版本：https://github.com/jiansing/gridea-theme-inlineamp/releases
+
+预览：https://jiansing.github.io/
+
+## 使用指南
+插入图片、视频、音频
+https://jiansing.github.io/include-images-and-video/
+
+添加评论
+https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
+
+
+## v1.3.0-alpha.0 updated 2020.4.21
+
+1. 增加 utterances（类 Gitalk）评论支持
+
+
+## v1.2.0 updated 2020.4.6
+比较接近原主题的版本
+
+可能以后也不会添加的功能：
+1. 点赞
+2. 浏览量计数
+
+归档页和标签页以后会重做
+
+## v1.2.0-beta.3 updated 2020.4.5
+
+1. 增加了侧边栏的近期文章显示
+2. 改善了代码高亮显示效果
+3. 改善了文章标签显示效果
+4. 修复了文章标签的显示Bug
+
+
 ## v1.2.0-beta.0 updated 2020.３.22
 
 1. 添加AddThis分享组件
@@ -57,18 +91,9 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 ### 语言
 用于设置 html lang 属性，默认设置为简体中文(zh-Hans)，一般用默认设置即可
 
-## 使用指南
-插入图片、视频、音频
-https://blog.ofo.moe/include-images-and-video/
-
-添加评论
-https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/
-
 
 ## 待实现的功能
 
-- 点赞功能
-- 阅读量显示
 - 标签云页面
 - 自定义CSS
 

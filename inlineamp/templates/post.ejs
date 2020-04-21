@@ -99,6 +99,11 @@
           <% if (site.customConfig.comments === 'facebookcomments') { %>
           <%- include('./includes/facebookcomments') %>
           <% } %>
+
+          <% if (site.customConfig.comments === 'utterances') { %>
+            <%- include('./includes/utterances') %>
+            <% } %>
+
           <% } %>
 
     </div>

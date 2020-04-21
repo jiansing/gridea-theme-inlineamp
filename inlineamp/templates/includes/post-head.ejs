@@ -2518,6 +2518,9 @@ footer {
   <% if (site.customConfig.comments === 'facebookcomments') { %>
     <script async custom-element="amp-facebook-comments" src="https://cdn.ampproject.org/v0/amp-facebook-comments-0.1.js"></script>
   <% } %>
+  <% if (site.customConfig.comments === 'utterances') { %>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <% } %>
   <% } %>
   <% if (site.customConfig.count) { %><script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
   <% } %>

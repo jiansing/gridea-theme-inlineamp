@@ -16,6 +16,12 @@ https://jiansing.github.io/include-images-and-video/
 添加评论
 https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
 
+## vv1.3.0-alpha.0 updated 2020.4.21
+
+1. 增加 utterances 评论支持
+
+分支：https://github.com/jiansing/gridea-theme-inlineamp/tree/v1.3.0-alpha.0
+
 ## v1.2.0 updated 2020.4.6
 比较接近原主题的版本
 

@@ -5,7 +5,7 @@ InlineAMP 是一款纯[AMP](https://amp.dev/)主题，设计上简约、干净�
 
 仓库下载：https://github.com/jiansing/gridea-theme-inlineamp
 
-历史版本：https://github.com/jiansing/gridea-theme-inlineamp/releases
+测试版本：https://github.com/jiansing/gridea-theme-inlineamp/releases
 
 预览：https://jiansing.github.io/
 
@@ -16,7 +16,11 @@ https://jiansing.github.io/include-images-and-video/
 添加评论
 https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
 
-## vv1.3.0-alpha.0 updated 2020.4.21
+## v1.3.0-alpha.1 updated 2020.4.23
+1. 增加 SEO Meta
+2. 增加 JSON-LD 结构化数据
+
+## v1.3.0-alpha.0 updated 2020.4.21
 
 1. 增加 utterances 评论支持
 

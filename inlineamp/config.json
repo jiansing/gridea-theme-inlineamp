@@ -199,38 +199,6 @@
       "note": "将显示在侧边栏"
     },
     {
-      "name": "video",
-      "label": "HTML5 amp-video 标签支持",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "如果需要嵌入视频请开启"
-    },
-    {
-      "name": "audio",
-      "label": "HTML5 amp-audio 标签支持",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "如果需要嵌入音频请开启"
-    },
-    {
-      "name": "gist",
-      "label": "HTML5 amp-gist 标签支持",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "如果需要使用 GitHub Gist 代码高亮请开启"
-    },
-    {
-      "name": "ampjs",
-      "label": "自定义 AMP JS",
-      "group": "可选模块",
-      "value": "",
-      "type": "input",
-      "note": "如需要嵌入第三方内容请在这里填写所需的 AMP JS，AMP 组件库：https://amp.dev/zh_cn/documentation/components/"
-    },
-    {
       "name": "tag",
       "label": "标签",
       "group": "侧边栏",
@@ -253,6 +221,22 @@
       "value": true,
       "type": "switch",
       "note": "显示最近文章"
+    },
+    {
+      "name": "metaDescription",
+      "label": "站点描述",
+      "group": "SEO",
+      "value": "",
+      "type": "input",
+      "note": "站点描述"
+    },
+    {
+      "name": "siteImage",
+      "label": "在 Twitter 等社交平台分享链接时将显示此预览图（文章页优先显示封面图），例：https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards",
+      "group": "SEO",
+      "value": "",
+      "type": "picture-upload",
+      "note": ""
     },
     {
       "name": "analytics",
@@ -279,9 +263,41 @@
       "note": ""
     },
     {
+      "name": "video",
+      "label": "HTML5 amp-video 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要嵌入视频请开启"
+    },
+    {
+      "name": "audio",
+      "label": "HTML5 amp-audio 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要嵌入音频请开启"
+    },
+    {
+      "name": "gist",
+      "label": "HTML5 amp-gist 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要使用 GitHub Gist 代码高亮请开启"
+    },
+    {
+      "name": "ampjs",
+      "label": "自定义 AMP JS",
+      "group": "其他",
+      "value": "",
+      "type": "input",
+      "note": "如需要嵌入第三方内容请在这里填写所需的 AMP JS，AMP 组件库：https://amp.dev/zh_cn/documentation/components/"
+    },
+    {
       "name": "lang",
-      "label": "<html> lang 属性,默认设置为简体中文(zh-Hans)",
-      "group": "语言",
+      "label": "<html> lang 属性，默认设置为简体中文(zh-Hans)",
+      "group": "其他",
       "value": "zh-Hans",
       "type": "input",
       "note": "默认设置为简体中文"

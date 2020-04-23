@@ -1,7 +1,8 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="<%- site.customConfig.metaDescription || themeConfig.siteDescription %>" />
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+<link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net/" crossorigin>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <title><%= siteTitle %></title>
 <style amp-custom>
@@ -251,6 +252,31 @@ footer{width:100vw;background:#222;display:flex;justify-content:center}
 <% if (site.customConfig.video) { %><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><% } %>
 <% if (site.customConfig.audio) { %><script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script><% } %>
 <link rel="alternate" type="application/atom+xml" title="<%= siteTitle %> - Atom Feed" href="<%= themeConfig.domain %>/atom.xml">
+
+<meta name="author" content="<%= site.customConfig.avatar %>">
+
+<meta itemprop="name" content="<%= siteTitle %>">
+<meta itemprop="description" content="<%- site.customConfig.metaDescription || themeConfig.siteDescription %>">
+<meta itemprop="image" content="<%= site.customConfig.siteImage %>">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= siteTitle %>">
+<meta name="twitter:description" content="<%- site.customConfig.metaDescription || themeConfig.siteDescription %>">
+<meta name="twitter:image" content="<%= site.customConfig.siteImage %>" />
+<meta name="twitter:image:alt" content="<%= siteTitle %>" />
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= themeConfig.domain %>">
+<meta property="og:title" content="<%= siteTitle %>">
+<meta property="og:description" content="<%- site.customConfig.metaDescription || themeConfig.siteDescription %>">
+<meta property="og:image" content="<%= site.customConfig.siteImage %>">
+<meta property="og:image:alt" content="<%= siteTitle %>" />
+<meta property="og:site_name" content="<%= siteTitle %>">
+<meta property="og:locale" content="zh_CN">
+<meta property="tag" content="<%= siteTitle %>" />
+
+
 <% if (site.customConfig.socialshare === 'addthis') { %>
   <% if (site.customConfig.addthisdatawidgettype === 'globalfloating') { %>
     <script async custom-element="amp-addthis" src="https://cdn.ampproject.org/v0/amp-addthis-0.1.js"></script>
@@ -293,3 +319,21 @@ footer{width:100vw;background:#222;display:flex;justify-content:center}
             <% } %>
     
         <% } %>
+
+
+        <script type="application/ld+json">
+          {
+            "@context":"https://schema.org",
+            "@type":"BreadcrumbList",
+            "itemListElement":
+            [
+             {
+              "@type":"ListItem",
+              "position":1,
+              "name":"Home",
+              "item":"<%= themeConfig.domain %>"
+             }
+             ]
+            }
+        
+        </script>

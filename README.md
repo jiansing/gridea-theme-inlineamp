@@ -17,6 +17,12 @@ https://jiansing.github.io/include-images-and-video/
 https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
 
 
+## v1.3.0-alpha.1 updated 2020.4.23
+1. 增加 SEO Meta
+2. 增加 JSON-LD 结构化数据
+
+
+
 ## v1.3.0-alpha.0 updated 2020.4.21
 
 1. 增加 utterances（类 Gitalk）评论支持

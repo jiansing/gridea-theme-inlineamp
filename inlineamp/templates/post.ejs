@@ -90,17 +90,6 @@
       </div>
 
 
-      <% if (site.customConfig.count) { %>
-        <amp-script layout="container" script="dsq-count-scr">
-        <!-- <span class="post-meta"> -->
-          <!-- <span class="iconfont icon-mr-postmeta"></span>  -->
-          <a href="#disqus_thread" data-disqus-identifier="<%= post.link %>"></a>
-              <!-- <span class="disqus-comment-count" data-disqus-url="<%= post.link %>" data-disqus-identifier="<%= post.link %>"></span> -->
-        <!-- </span> -->
-      </amp-script>
-
-        <% } %>
-
         <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
         <% if (site.customConfig.comments === 'disqus') { %>
           <%- include('./includes/disqus') %>
@@ -150,10 +139,6 @@
       </amp-addthis>
         <% } %>
       <% } %>
-
-  <% if (site.customConfig.count) { %>
-    <script id="dsq-count-scr" src="//<%= site.customConfig.disqusdomain %>.disqus.com/count.js" target="amp-script" async></script>
-    <% } %>
 
 
 </body>

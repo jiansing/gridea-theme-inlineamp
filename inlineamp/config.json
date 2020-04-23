@@ -1,6 +1,6 @@
 {
   "name": "InlineAMP",
-  "version": "1.2.0-beta.3",
+  "version": "1.2.1",
   "author": "Jiansing",
   "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
   "customConfig": [
@@ -127,14 +127,6 @@
       "note": "该文件不能与blog使用同一域名（可以使用不同的子域名如cdn.example.com）"
     },
     {
-      "name": "count",
-      "label": "评论计数",
-      "group": "评论",
-      "value": false,
-      "type": "switch",
-      "note": "如果需要显示文章评论数请开启"
-    },
-    {
       "name": "disqusdomain",
       "label": "Disqus子域",
       "group": "评论",
@@ -211,14 +203,6 @@
       "note": "如果需要使用GitHub Gist代码高亮请开启"
     },
     {
-      "name": "bind",
-      "label": "amp-bind、amp-mustache支持",
-      "group": "可选模块",
-      "value": false,
-      "type": "switch",
-      "note": ""
-    },
-    {
       "name": "ampjs",
       "label": "自定义AMP JS",
       "group": "可选模块",
@@ -281,14 +265,6 @@
       "value": "zh-Hans",
       "type": "input",
       "note": "默认设置为简体中文"
-    },
-    {
-      "name": "test",
-      "label": "test",
-      "group": "实验性功能",
-      "value": true,
-      "type": "switch",
-      "note": "test"
     }
 
   ]

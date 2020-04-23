@@ -2506,10 +2506,7 @@ footer {
 <% } %>
 
 <% if (site.customConfig.gist) { %><script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script><% } %>
-<% if (site.customConfig.bind) { %>
-  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-  <% } %>
+
 <link rel="alternate" type="application/atom+xml" title="<%= siteTitle %> - Atom Feed" href="<%= themeConfig.domain %>/atom.xml">
 <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
   <% if (site.customConfig.comments === 'disqus') { %>

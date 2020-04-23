@@ -24,7 +24,7 @@
           <div class="flex-box post-meta-box">
             <a class="post-meta" href="<%= themeConfig.domain %>"><span
                 class="iconfont icon-mr-postmeta"></span><%= site.customConfig.avatar %></a>
-            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span><%= post.dateFormat %></span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span><%= site.utils.moment(post.date).locale('zh-cn').format("YYYY [年] MM	[月] Do") %></span>
           </div>
         </div>
       </div>

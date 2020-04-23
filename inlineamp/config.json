@@ -223,14 +223,6 @@
       "note": "如果需要使用 GitHub Gist 代码高亮请开启"
     },
     {
-      "name": "bind",
-      "label": "amp-bind、amp-mustache 支持",
-      "group": "可选模块",
-      "value": false,
-      "type": "switch",
-      "note": ""
-    },
-    {
       "name": "ampjs",
       "label": "自定义 AMP JS",
       "group": "可选模块",
@@ -293,14 +285,6 @@
       "value": "zh-Hans",
       "type": "input",
       "note": "默认设置为简体中文"
-    },
-    {
-      "name": "test",
-      "label": "test",
-      "group": "实验性功能",
-      "value": true,
-      "type": "switch",
-      "note": "test"
     }
 
   ]

@@ -1,0 +1,54 @@
+<meta name="author" content="<%= site.customConfig.avatar %>">
+
+<meta itemprop="name" content="<%= siteTitle %>">
+<meta itemprop="description" content="<%- post.description %>">
+<meta itemprop="image" content="<%- post.feature || site.customConfig.siteImage %>">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= siteTitle %>">
+<meta name="twitter:description" content="<%- post.description %>">
+<meta name="twitter:image" content="<%- post.feature || site.customConfig.siteImage %>" />
+<meta name="twitter:image:alt" content="<%= siteTitle %>" />
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= post.link %>">
+<meta property="og:title" content="<%= siteTitle %>">
+<meta property="og:description" content="<%- post.description %>">
+<meta property="og:image" content="<%- post.feature || site.customConfig.siteImage %>">
+<meta property="og:image:alt" content="<%= siteTitle %>" />
+<meta property="og:site_name" content="<%= siteTitle %>">
+<meta property="og:locale" content="zh_CN">
+<meta property="tag" content="<%= siteTitle %>" />
+
+
+<script type="application/ld+json">
+  {
+"@context": "https://schema.org",
+"@type": "NewsArticle",
+"mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "<%= post.link %>"
+},
+"headline": "<%= siteTitle %>",
+"datePublished": "<%= site.utils.moment(post.date) %>",
+"dateModified": "<%= site.utils.moment(post.date) %>",
+"author": {
+  "@type": "Person",
+  "name": "<%= site.customConfig.avatar %>"
+},
+"publisher": {
+  "@type": "Organization",
+  "name": "<%= site.customConfig.avatar %>",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "<%= themeConfig.domain %>/favicon.ico"
+  }
+},
+"image": [
+"<%- post.feature || site.customConfig.siteImage %>"
+],
+"description": "<%- post.description %>"
+ }
+
+</script>

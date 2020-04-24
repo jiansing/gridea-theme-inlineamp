@@ -247,6 +247,9 @@ footer{width:100vw;background:#222;display:flex;justify-content:center}
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <link rel="canonical" href="<%= themeConfig.domain %>" />
 <link rel="shortcut icon" href="<%= themeConfig.domain %>/favicon.ico?v=<%= site.utils.now %>">
+
+<%- include('./includes/seo') %>
+
 <% if (site.customConfig.search) { %><script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script><% } %>
 <% if (site.customConfig.video) { %><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><% } %>
 <% if (site.customConfig.audio) { %><script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script><% } %>

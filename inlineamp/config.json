@@ -1,13 +1,13 @@
 {
   "name": "InlineAMP",
-  "version": "1.3.0-alpha.2",
+  "version": "1.3.0-alpha.3",
   "author": "Jiansing",
   "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
   "customConfig": [
     {
       "name": "tagline",
       "label": "顶部标语",
-      "group": "顶部标语区域",
+      "group": "外观",
       "value": true,
       "type": "switch",
       "note": "顶部标语将展示在每个页面顶部"
@@ -15,7 +15,7 @@
     {
       "name": "taglinemain",
       "label": "主标语",
-      "group": "顶部标语区域",
+      "group": "外观",
       "value": "",
       "type": "input",
       "note": "将展示在每个页面顶部"
@@ -23,10 +23,68 @@
     {
       "name": "taglinesub",
       "label": "副标语",
-      "group": "顶部标语区域",
+      "group": "外观",
       "value": "",
       "type": "input",
       "note": "将展示在每个页面顶部"
+    },
+    {
+      "name": "theme",
+      "label": "主题",
+      "group": "外观",
+      "value": "light",
+      "type": "select",
+      "note": "预置明暗两种主题",
+      "options": [
+        {
+          "label": "light",
+          "value": "light"
+        },
+        {
+          "label": "dark",
+          "value": "dark"
+        }
+      ]
+    },
+    {
+      "name": "headerbackground",
+      "label": "公共顶部背景色（明亮主题下）",
+      "group": "外观",
+      "value": "#222",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "headerbackgrounddark",
+      "label": "公共顶部背景色（暗黑主题下）",
+      "group": "外观",
+      "value": "#222",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "themecolor",
+      "label": "主题色",
+      "group": "外观",
+      "value": "#222",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "themecolordark",
+      "label": "主题色（暗黑主题下）",
+      "group": "外观",
+      "value": "#222",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "customCss",
+      "label": "自定义 CSS",
+      "group": "外观",
+      "value": "",
+      "type": "input",
+      "note": ""
     },
     {
       "name": "avatar",

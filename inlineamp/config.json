@@ -127,14 +127,6 @@
       "note": "该文件不能与blog使用同一域名（可以使用不同的子域名如cdn.example.com）"
     },
     {
-      "name": "disqusdomain",
-      "label": "Disqus子域",
-      "group": "评论",
-      "value": "",
-      "type": "input",
-      "note": "如开启评论计数请填写"
-    },
-    {
       "name": "facebookcommentslanguage",
       "label": "Facebook评论系统语言",
       "group": "评论",

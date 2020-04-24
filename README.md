@@ -16,6 +16,10 @@ https://jiansing.github.io/include-images-and-video/
 添加评论
 https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
 
+## v1.2.1 updated 2020.4.24
+1. 修复了 Disqus 评论区重复显示的问题
+
+
 ## v1.3.0-alpha.1 updated 2020.4.23
 1. 增加 SEO Meta
 2. 增加 JSON-LD 结构化数据

@@ -113,8 +113,12 @@
           "value": "gitalk"
         },
         {
-          "label": "utterances 评论（实验性）",
+          "label": "Utterances 评论（实验性）",
           "value": "utterances"
+        },
+        {
+          "label": "Valine 评论（实验性）",
+          "value": "valine"
         },
         {
           "label": "Disqus",
@@ -137,6 +141,14 @@
     {
       "name": "disqusurl",
       "label": "Disqus 代码 URL",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "valineurl",
+      "label": "Valine 代码 URL",
       "group": "评论",
       "value": "",
       "type": "input",

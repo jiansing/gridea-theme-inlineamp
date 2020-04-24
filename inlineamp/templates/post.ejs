@@ -103,6 +103,10 @@
               <%- include('./includes/utterances') %>
               <% } %>
 
+              <% if (site.customConfig.comments === 'valine') { %>
+                <%- include('./includes/valine') %>
+                <% } %>
+
           <% if (site.customConfig.comments === 'facebookcomments') { %>
           <%- include('./includes/facebookcomments') %>
           <% } %>

@@ -23,7 +23,9 @@ https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
 3. 支持 Gitalk 评论
 4. 支持 Valine 评论
 5. 支持 Utterances 评论
+
 以上评论系统均以能够通过 AMP 验证的方式实现，由于不是官方给出的实现方案，可能存在一些常规情况下不会出现的问题，在后面的版本中随时可能被移除。
+
 分支：https://github.com/jiansing/gridea-theme-inlineamp/tree/v1.3.0-alpha.2
 
 ## v1.2.1 updated 2020.4.24

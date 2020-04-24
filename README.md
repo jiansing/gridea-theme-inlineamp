@@ -16,19 +16,19 @@ https://jiansing.github.io/include-images-and-video/
 添加评论
 https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/
 
+## v1.3.0-alpha.2 updated 2020.4.24
+版本特性：
+1. 支持文章页与首页 SEO Meta
+2. 支持文章页与首页 JSON-LD 结构化数据
+3. 支持 Gitalk 评论
+4. 支持 Valine 评论
+5. 支持 Utterances 评论
+以上评论系统均以能够通过 AMP 验证的方式实现，由于不是官方给出的实现方案，可能存在一些常规情况下不会出现的问题，在后面的版本中随时可能被移除。
+分支：https://github.com/jiansing/gridea-theme-inlineamp/tree/v1.3.0-alpha.2
+
 ## v1.2.1 updated 2020.4.24
 1. 修复了 Disqus 评论区重复显示的问题
 
-
-## v1.3.0-alpha.1 updated 2020.4.23
-1. 增加 SEO Meta
-2. 增加 JSON-LD 结构化数据
-
-## v1.3.0-alpha.0 updated 2020.4.21
-
-1. 增加 utterances 评论支持
-
-分支：https://github.com/jiansing/gridea-theme-inlineamp/tree/v1.3.0-alpha.0
 
 ## v1.2.0 updated 2020.4.6
 比较接近原主题的版本

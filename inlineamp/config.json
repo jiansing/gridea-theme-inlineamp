@@ -64,9 +64,9 @@
     },
     {
       "name": "themecolor",
-      "label": "主题色",
+      "label": "主题色（明亮主题下）",
       "group": "外观",
-      "value": "#222",
+      "value": "#dbb302",
       "type": "input",
       "note": ""
     },
@@ -74,7 +74,7 @@
       "name": "themecolordark",
       "label": "主题色（暗黑主题下）",
       "group": "外观",
-      "value": "#222",
+      "value": "#dbb302",
       "type": "input",
       "note": ""
     },

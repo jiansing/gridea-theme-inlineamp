@@ -5,7 +5,23 @@
   @font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:local('PT Serif'),local('PTSerif-Regular'),url(https://cdn.jsdelivr.net/gh/jiansing/gridea-theme-inlineamp/inlineamp/assets/media/fonts/ptserif.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
   .iconfont{font-family:iconfont;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
   input[type=email],input[type=password],input[type=submit],input[type=text],input[type=url],textarea{-webkit-appearance:none;border-radius:0}
+  <% if (site.customConfig.headerbackgroundimage) { %>
+    header{
+      background-image:url(<%= site.customConfig.headerbackgroundimage %>);
+ 			background-repeat: no-repeat;
+ 			background-size:100%;
+    }
+
+  <% } %>
+
+  <% if (site.customConfig.headerbackgroundno) { %>
+
+  <% if (site.customConfig.headerbackground) { %>
   header{width:100vw;background: <%= site.customConfig.headerbackground %>;display:flex;justify-content:center}
+  <% } %>
+  <% } %>
+
+
   .top-container{width:71.4286vw;height:100%}
   .title-menus-area{display:flex;width:100%;height:5.8095vw;justify-content:space-between}
   .blog-title{display:flex;font-size:1.6667vw;font-weight:700;color:#fff;margin-top:1.2857vw;white-space:nowrap;text-decoration:none;line-height:1.6667vw}

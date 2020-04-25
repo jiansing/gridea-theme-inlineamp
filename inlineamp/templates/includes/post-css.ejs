@@ -45,13 +45,22 @@
       -webkit-appearance: none;
       border-radius: 0;
   }
+  <% if (site.customConfig.headerbackgroundimage) { %>
+    header{
+      background-image:url(<%= site.customConfig.headerbackgroundimage %>);
+ 			background-repeat: no-repeat;
+ 			background-size:100%;
+    }
+
+  <% } %>
+
+  <% if (site.customConfig.headerbackgroundno) { %>
+
+  <% if (site.customConfig.headerbackground) { %>
+  header{width:100vw;background: <%= site.customConfig.headerbackground %>;display:flex;justify-content:center}
+  <% } %>
+  <% } %>
   
-  header {
-      width: 100vw;
-      background: #222222;
-      display: flex;
-      justify-content: center;
-  }
   .top-container {
       width: 71.4286vw;
       height: 100%;
@@ -110,7 +119,7 @@
   }
   
   .tagline-sub a:hover {
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
   }
   
   /* go top button */
@@ -127,7 +136,7 @@
       height: 2.9762vw;
       font-size: 1.1905vw;
       text-decoration: none;
-      background: #DBB302;
+      background: <%= site.customConfig.themecolor %>;
       border-radius: 100%;
       color: white;
       justify-content: center;
@@ -223,7 +232,7 @@
       font-size: 0.9524vw;
   }
   .top-menus>nav>ul>li:hover a {
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
   }
   .top-menus>nav>ul>li:hover>ul {
       opacity: 1;
@@ -289,7 +298,7 @@
   }
   
   .top-menus>nav>ul>li>.sub-menu>li a:hover {
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
   }
   
   #header-menu-button {
@@ -392,7 +401,7 @@
       }
   
       .top-menus>nav>ul li a:hover {
-          color: #DBB302;
+          color: <%= site.customConfig.themecolor %>;
       }
   
       .top-menus>nav>ul>li>.sub-menu>li {
@@ -531,7 +540,7 @@
   .post-cate {
       font-size: 0.9524vw;
       line-height: 1.5476vw;
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
       text-decoration: none;
       margin-right: 0.9644vw;  
       display: flex;
@@ -541,7 +550,7 @@
   .sticky-tag {
       display: flex;
       align-items: center;  
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
   }
   
   .post-cate:before,
@@ -551,7 +560,7 @@
       width:0.0595vw;
       min-width: 1px;
       height: 0.6548vw;
-      background: #DBB302; 
+      background: <%= site.customConfig.themecolor %>; 
       margin-right: 0.9524vw;       
   }
   
@@ -587,7 +596,7 @@
       content: '';
       width: 4.1667vw;
       height: 0.2976vw;
-      background: #DBB302;
+      background: <%= site.customConfig.themecolor %>;
       margin-top: 0.7321vw;
   }
   
@@ -637,14 +646,14 @@
       padding-right: 1.1905vw;
       padding-top: 0.7143vw;
       padding-bottom: 0.7143vw;
-      color: #DBB302;
-      border: 0.0595vw #DBB302 solid;
+      color: <%= site.customConfig.themecolor %>;
+      border: 0.0595vw <%= site.customConfig.themecolor %> solid;
       transition: all .2s;
       text-transform: uppercase;
   }
   
   .read-more:hover {
-      background: #DBB302;
+      background: <%= site.customConfig.themecolor %>;
       color: white;
   }
   
@@ -697,7 +706,7 @@
   }
   
   .post-publish-date .post-date {
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
       font-size: 1.3095vw;
       line-height: 2.2916vw;
       font-weight: bold;
@@ -726,8 +735,8 @@
   .nav-links .page-numbers,.nav-links .post-page-numbers {
       min-width: 2.1429vw;
       height: 2.1429vw;
-      border: 0.0595vw #DBB302 solid;
-      color: #DBB302;
+      border: 0.0595vw <%= site.customConfig.themecolor %> solid;
+      color: <%= site.customConfig.themecolor %>;
       font-size: 1.0714vw;
       line-height: 1.0714vw;
       text-decoration: none;
@@ -741,7 +750,7 @@
   }
   
   .nav-links .current, .nav-links a.page-numbers:hover,.nav-links a.post-page-numbers:hover {
-      background: #DBB302;
+      background: <%= site.customConfig.themecolor %>;
       color: white;
   }
   
@@ -843,7 +852,7 @@
           padding-right: 3.7333vw;
           padding-top: 2vw;
           padding-bottom: 2vw;
-          border: 0.1333vw #DBB302 solid;
+          border: 0.1333vw <%= site.customConfig.themecolor %> solid;
       }
   
       .icon-ml-readmore {
@@ -879,7 +888,7 @@
       .nav-links .page-numbers,.nav-links .post-page-numbers {
           min-width: 8vw;
           height: 8vw;
-          border: 0.1333vw #DBB302 solid;
+          border: 0.1333vw <%= site.customConfig.themecolor %> solid;
           font-size: 4vw;
           line-height: 4vw;
           margin-left: 1.7733vw;
@@ -962,7 +971,7 @@
   .widget_categories>ul>li.cat-item:before {
       content: '\e641';
       font-family: "iconfont";
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
       font-size: 0.9524vw;
       margin-right: 0.7143vw;
       -webkit-font-smoothing: antialiased;
@@ -989,7 +998,7 @@
       content: "\e642";
       display: inline-flex;
       font-family: "iconfont";
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
       font-size: 0.9524vw;
       margin-right: 0.5952vw;
       -webkit-font-smoothing: antialiased;
@@ -1029,14 +1038,14 @@
   }
   
   .widget ul li a:hover {
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
   }
   
   
   .widget>ul>li:before {
       content: '\e62d';
       font-family: "iconfont";
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
       font-size: 0.893vw;
       margin-right: 0.7143vw;
       -webkit-font-smoothing: antialiased;
@@ -1160,7 +1169,7 @@
   
   .widget_profile a {
       font-size: 0.9524vw;
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
       text-decoration: none;
   }
   
@@ -1228,7 +1237,7 @@
   
       .widget_profile a {
           font-size: 4vw;
-          color: #DBB302;
+          color: <%= site.customConfig.themecolor %>;
           text-decoration: none;
       }
   
@@ -1369,7 +1378,7 @@
       background: #444444;
   }
   .footer-menus>nav>ul>li>a {
-      color: #DBB302;
+      color: <%= site.customConfig.themecolor %>;
   }
   .footer-menus>nav a {
       text-decoration: none;
@@ -1397,7 +1406,7 @@
   }
   
   .footer-container a:hover {
-      color:#DBB302;
+      color:<%= site.customConfig.themecolor %>;
   }
   .footer-menus>nav>ul>li ul li:first-child {
       margin-top: 0.893vw;
@@ -1769,13 +1778,13 @@
           float: right;
           display:flex;
           padding: 0.7143vw 1.131vw 0.7143vw 1.131vw;
-          border: 0.0595vw #DBB302 solid;
+          border: 0.0595vw <%= site.customConfig.themecolor %> solid;
           line-height: 0.7619vw;
       }
   
       .wp-block-file a:last-child:hover,
       a.wp-block-file__button:hover {
-          background: #DBB302;
+          background: <%= site.customConfig.themecolor %>;
           color: white;
       }
   
@@ -1790,7 +1799,7 @@
       }
   
       .content a {
-          color: #DBB302;
+          color: <%= site.customConfig.themecolor %>;
           text-decoration: none;
       }
   
@@ -1867,7 +1876,7 @@
           align-items: center;
       }
       .likes-button:hover,.likes-button-active{
-          color: #DBB302;
+          color: <%= site.customConfig.themecolor %>;
       }
   
       .likes-button:before {
@@ -1901,7 +1910,7 @@
           color: black;
       }
       .post-nav a.post-nav-link-active:hover {
-          color: #DBB302;
+          color: <%= site.customConfig.themecolor %>;
       }
       .post-nav .nav-previous a:before {
           content: '\e640';
@@ -1940,7 +1949,7 @@
       }
   
       amp-social-share.rounded:hover {
-          background-color: #DBB302;
+          background-color: <%= site.customConfig.themecolor %>;
       }
   
       .post-tags {
@@ -2106,9 +2115,9 @@
       }
   
       .comment-form>.form-submit>.submit {
-          border: 0.0595vw solid #DBB302;
+          border: 0.0595vw solid <%= site.customConfig.themecolor %>;
           text-transform: uppercase;
-          color: #DBB302;
+          color: <%= site.customConfig.themecolor %>;
           font-size: 1.0952vw;
           line-height: 1.0952vw;
           background: white;
@@ -2118,7 +2127,7 @@
       }
   
       .comment-form>.form-submit>.submit:hover {
-          background: #DBB302;
+          background: <%= site.customConfig.themecolor %>;
           color: white; 
       }
   
@@ -2275,7 +2284,7 @@
   
           .wp-block-file a:last-child, a.wp-block-file__button {
               padding: 1.6vw 3.2vw 1.6vw 3.2vw;
-              border: 0.1333vw #DBB302 solid;
+              border: 0.1333vw <%= site.customConfig.themecolor %> solid;
               line-height: 2.1333vw;
           }
   
@@ -2383,7 +2392,7 @@
   
   
           .comment-form>.form-submit>.submit {
-              border: 0.1333vw solid #DBB302;
+              border: 0.1333vw solid <%= site.customConfig.themecolor %>;
               font-size: 3.2vw;
               line-height: 3.2vw;
               padding: 2.8133vw 4.4vw 2.8133vw 4.4vw;
@@ -2483,4 +2492,7 @@
     }
       :root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-681d4ff{text-align:center;margin-top:.5vw}
   
+
+      <%= site.customConfig.customCss %>
+
   </style>

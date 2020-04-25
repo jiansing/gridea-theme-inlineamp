@@ -34,7 +34,7 @@
       "group": "外观",
       "value": "light",
       "type": "select",
-      "note": "预置明暗两种主题",
+      "note": "预置主题配色",
       "options": [
         {
           "label": "light",
@@ -79,8 +79,24 @@
       "note": ""
     },
     {
+      "name": "headerbackgroundno",
+      "label": "不使用图片作为公共顶部背景",
+      "group": "外观",
+      "value": true,
+      "type": "switch",
+      "note": "不使用图片作为公共顶部背景"
+    },
+    {
+      "name": "headerbackgroundimage",
+      "label": "公共顶部背景图片地址",
+      "group": "外观",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
       "name": "customCss",
-      "label": "自定义 CSS",
+      "label": "自定义 CSS（注意 AMP 允许的 CSS 大小为 75,000 byte 以内）",
       "group": "外观",
       "value": "",
       "type": "input",

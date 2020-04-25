@@ -30,19 +30,23 @@
     },
     {
       "name": "theme",
-      "label": "主题",
+      "label": "主题配色方案",
       "group": "外观",
-      "value": "light",
+      "value": "default",
       "type": "select",
-      "note": "预置主题配色",
+      "note": "预置主题配色方案",
       "options": [
         {
-          "label": "light",
-          "value": "light"
+          "label": "Default",
+          "value": "default"
         },
         {
-          "label": "dark",
-          "value": "dark"
+          "label": "Fluent-BlueDarker",
+          "value": "fluentblueDarker"
+        },
+        {
+          "label": "自定义配色",
+          "value": "customize"
         }
       ]
     },

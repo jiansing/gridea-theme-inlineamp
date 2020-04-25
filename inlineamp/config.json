@@ -95,6 +95,46 @@
       "note": ""
     },
     {
+      "name": "blogtitle",
+      "label": "Blog 名称颜色",
+      "group": "外观",
+      "value": "#fff",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "taglinemain",
+      "label": "主标语颜色",
+      "group": "外观",
+      "value": "#fff",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "taglinemainafter",
+      "label": "标语分割线颜色",
+      "group": "外观",
+      "value": "#f6f8fa",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "taglinesub",
+      "label": "副标语颜色",
+      "group": "外观",
+      "value": "#8a8a8a",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "topmenus",
+      "label": "菜单文字颜色",
+      "group": "外观",
+      "value": "#fff",
+      "type": "input",
+      "note": ""
+    },
+    {
       "name": "customCss",
       "label": "自定义 CSS（注意 AMP 允许的 CSS 大小为 75,000 byte 以内）",
       "group": "外观",
@@ -367,6 +407,28 @@
       "value": "",
       "type": "input",
       "note": "如需要嵌入第三方内容请在这里填写所需的 AMP JS，AMP 组件库：https://amp.dev/zh_cn/documentation/components/"
+    },
+    {
+      "name": "update",
+      "label": "主题更新提醒",
+      "group": "其他",
+      "value": "updatebeta",
+      "type": "select",
+      "note": "开启后会在页脚显示主题最新的版本信息及正在使用的版本号",
+      "options": [
+        {
+          "label": "不显示",
+          "value": "noupdate"
+        },
+        {
+          "label": "仅获取最新的稳定版本",
+          "value": "updatestable"
+        },
+        {
+          "label": "获取最新的 beta 版本",
+          "value": "updatebeta"
+        }
+      ]
     },
     {
       "name": "lang",

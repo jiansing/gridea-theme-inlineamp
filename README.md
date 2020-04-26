@@ -26,34 +26,6 @@ NEW：
 2. 预置两种配色方案
 3. 支持自定义 CSS
 4. 支持公共顶部设置图片作为背景
-=======
-## v1.3.0-alpha.3 updated 2020.4.25
-1. 增加了主题更新提醒
-2. 支持设置主题配色
-3. 支持公共顶部设置图片作为背景
-4. 修复了 Disqus 评论代码 URL 无法加载的问题
-5. 支持自定义 CSS（注意 AMP 允许的 CSS 大小为 75,000 byte 以内）
-
-
-## v1.3.0-alpha.2 updated 2020.4.24
-版本特性：
-1. 支持文章页与首页 SEO Meta
-2. 支持文章页与首页 JSON-LD 结构化数据
-3. 支持 Gitalk 评论
-4. 支持 Valine 评论
-5. 支持 Utterances 评论
-
-以上评论系统均以能够通过 AMP 验证的方式实现，由于不是官方给出的实现方案，可能存在一些常规情况下不会出现的问题，在后面的版本中随时可能被移除。
-
-分支：https://github.com/jiansing/gridea-theme-inlineamp/tree/v1.3.0-alpha.2
-
-
-## v1.2.2 updated 2020.4.25
-1. 修复了 Disqus 评论代码 URL 无法加载的问题
-
-## v1.2.1 updated 2020.4.24
-1. 修复了 Disqus 评论区重复显示的问题
-
 
 ### 评论
 
@@ -117,3 +89,9 @@ Gitalk、Valine、Utterances 评论系统均以能够通过 AMP 验证的方式�
 - PWA 支持
 - 主题自定义
 - 代码高亮
+
+
+
+
+
+

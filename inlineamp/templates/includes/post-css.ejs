@@ -76,7 +76,7 @@
       display: flex;
       font-size: 1.6667vw;
       font-weight: bold;
-      color: white;
+      color: <%= site.customConfig.blogtitle %>;
       margin-top: 1.2857vw;
       white-space: nowrap;
       text-decoration: none;
@@ -90,7 +90,7 @@
       align-items: center;
   }
   .tagline-main {
-      color: white;
+      color: <%= site.customConfig.taglinemain %>;
       font-size: 2.9286vw;
       margin-bottom: 1.6667vw;
       line-height: 2.9286vw;
@@ -101,14 +101,14 @@
   .tagline-main:after {
       content: '';
       display: flex;
-      background: #F6F8FA;
+      background: <%= site.customConfig.taglinemainafter %>;
       width: 4.7619vw;
       height: 0.2381vw;
       margin-top: 1.6667vw;
   }
   
   .tagline-sub {
-      color: #8A8A8A;
+      color: <%= site.customConfig.taglinesub %>;
       font-size: 0.9524vw;
       line-height: 1.6667vw;
       margin-bottom: 3.5119vw;

@@ -227,15 +227,15 @@
       "note": "配置Disqus见：https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/",
       "options": [
         {
-          "label": "Gitalk（实验性）",
+          "label": "Gitalk（Beta）",
           "value": "gitalk"
         },
         {
-          "label": "Utterances 评论（实验性）",
+          "label": "Utterances 评论（Beta）",
           "value": "utterances"
         },
         {
-          "label": "Valine 评论（实验性）",
+          "label": "Valine 评论（Beta）",
           "value": "valine"
         },
         {
@@ -243,7 +243,7 @@
           "value": "disqus"
         },
         {
-          "label": "Facebook评论",
+          "label": "Facebook 评论",
           "value": "facebookcomments"
         }
       ]
@@ -267,6 +267,14 @@
     {
       "name": "valineurl",
       "label": "Valine 代码 URL",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "utterancesurl",
+      "label": "Utterances 代码 URL",
       "group": "评论",
       "value": "",
       "type": "input",
@@ -317,20 +325,34 @@
       "note": "将显示在侧边栏"
     },
     {
+      "name": "search",
+      "label": "站内搜索",
+      "group": "侧边栏",
+      "value": "googlesearch",
+      "type": "select",
+      "note": "站内搜索小部件",
+      "options": [
+        {
+          "label": "无",
+          "value": "nosearch"
+        },
+        {
+          "label": "Google",
+          "value": "googlesearch"
+        },
+        {
+          "label": "Baidu",
+          "value": "baidusearch"
+        }
+      ]
+    },
+    {
       "name": "tag",
       "label": "标签",
       "group": "侧边栏",
       "value": true,
       "type": "switch",
       "note": "侧边栏显示所有标签"
-    },
-    {
-      "name": "search",
-      "label": "Google 站内搜索",
-      "group": "侧边栏",
-      "value": true,
-      "type": "switch",
-      "note": "侧边栏 Google 搜索小部件"
     },
     {
       "name": "latestarticles",
@@ -354,6 +376,38 @@
       "group": "SEO",
       "value": "",
       "type": "picture-upload",
+      "note": ""
+    },
+    {
+      "name": "ldjson",
+      "label": "结构化数据",
+      "group": "SEO",
+      "value": true,
+      "type": "switch",
+      "note": ""
+    },
+    {
+      "name": "ldjsonlogo",
+      "label": "Logo 结构化数据",
+      "group": "SEO",
+      "value": false,
+      "type": "switch",
+      "note": ""
+    },
+    {
+      "name": "ldjsonlogos",
+      "label": "用于结构化数据的 Logo（图片必须至少为 112x112 像素）",
+      "group": "SEO",
+      "value": "",
+      "type": "picture-upload",
+      "note": ""
+    },
+    {
+      "name": "PageMap",
+      "label": "PageMap",
+      "group": "SEO",
+      "value": false,
+      "type": "switch",
       "note": ""
     },
     {

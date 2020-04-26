@@ -17,15 +17,15 @@
 <meta property="og:description" content="<%- post.description %>">
 <meta property="og:image" content="<%- post.feature || site.customConfig.siteImage %>">
 <meta property="og:image:alt" content="<%= siteTitle %>" />
-<meta property="og:site_name" content="<%= siteTitle %>">
+<meta property="og:site_name" content="<%= themeConfig.siteName %>">
 <meta property="og:locale" content="zh_CN">
 <meta property="tag" content="<%= siteTitle %>" />
 
-
+<% if (site.customConfig.ldjson) { %>
 <script type="application/ld+json">
   {
 "@context": "https://schema.org",
-"@type": "NewsArticle",
+"@type": "BlogPosting",
 "mainEntityOfPage": {
   "@type": "WebPage",
   "@id": "<%= post.link %>"
@@ -52,3 +52,46 @@
  }
 
 </script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/", 
+    "@type": "BreadcrumbList", 
+    "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home",
+      "item": "<%= themeConfig.domain %>"  
+    },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "<%= siteTitle %>",
+      "item": "<%= post.link %>"  
+    }]
+  }
+  </script>
+<% } %>
+
+<% if (site.customConfig.ldjsonlogo) { %>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "<%= themeConfig.siteName %>",
+    "url": "<%= themeConfig.domain %>",
+    "logo": "<%= site.customConfig.ldjsonlogos %>"
+  }
+  </script>
+  <% } %>
+
+<% if (site.customConfig.PageMap) { %>
+<!--
+  <PageMap>
+    <DataObject type="action">
+      <Attribute name="label" value="View"/>
+      <Attribute name="url" value="<%= post.link %>"/>
+      <Attribute name="class" value="fullscreen"/>
+    </DataObject>
+  </PageMap>
+-->
+  <% } %>

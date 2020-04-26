@@ -2,7 +2,7 @@
 <html amp lang="<%= site.customConfig.lang %>">
 
 <head>
-  <%- include('./includes/head', { siteTitle: `${tag.name} | ${themeConfig.siteName}` }) %>
+  <%- include('./includes/tag-head', { siteTitle: `${tag.name} | ${themeConfig.siteName}` }) %>
 </head>
 
 
@@ -29,7 +29,7 @@
         </label>
       </div>
       <div class="tagline">
-        <div class="tagline-main">分类：<%= tag.name %></div>
+        <div class="tagline-main">标签：<%= tag.name %></div>
       </div>
     </div>
   </header>

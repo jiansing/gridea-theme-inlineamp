@@ -1,0 +1,97 @@
+<meta name="author" content="<%= site.customConfig.avatar %>">
+
+<meta itemprop="name" content="<%= siteTitle %>">
+<meta itemprop="description" content="<%- post.description %>">
+<meta itemprop="image" content="<%- post.feature || site.customConfig.siteImage %>">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= siteTitle %>">
+<meta name="twitter:description" content="<%- post.description %>">
+<meta name="twitter:image" content="<%- post.feature || site.customConfig.siteImage %>" />
+<meta name="twitter:image:alt" content="<%= siteTitle %>" />
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= post.link %>">
+<meta property="og:title" content="<%= siteTitle %>">
+<meta property="og:description" content="<%- post.description %>">
+<meta property="og:image" content="<%- post.feature || site.customConfig.siteImage %>">
+<meta property="og:image:alt" content="<%= siteTitle %>" />
+<meta property="og:site_name" content="<%= themeConfig.siteName %>">
+<meta property="og:locale" content="zh_CN">
+<meta property="tag" content="<%= siteTitle %>" />
+
+<% if (site.customConfig.ldjson) { %>
+<script type="application/ld+json">
+  {
+"@context": "https://schema.org",
+"@type": "BlogPosting",
+"mainEntityOfPage": {
+  "@type": "WebPage",
+  "@id": "<%= post.link %>"
+},
+"headline": "<%= siteTitle %>",
+"datePublished": "<%= site.utils.moment(post.date) %>",
+"dateModified": "<%= site.utils.moment(post.date) %>",
+"author": {
+  "@type": "Person",
+  "name": "<%= site.customConfig.avatar %>"
+},
+"publisher": {
+  "@type": "Organization",
+  "name": "<%= site.customConfig.avatar %>",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "<%= themeConfig.domain %>/favicon.ico"
+  }
+},
+"image": [
+"<%- post.feature || site.customConfig.siteImage %>"
+],
+"description": "<%- post.description %>"
+ }
+
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/", 
+    "@type": "BreadcrumbList", 
+    "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Home",
+      "item": "<%= themeConfig.domain %>"  
+    },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "<%= siteTitle %>",
+      "item": "<%= post.link %>"  
+    }]
+  }
+  </script>
+<% } %>
+
+<% if (site.customConfig.ldjsonlogo) { %>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "<%= themeConfig.siteName %>",
+    "url": "<%= themeConfig.domain %>",
+    "logo": "<%= site.customConfig.ldjsonlogos %>"
+  }
+  </script>
+  <% } %>
+
+<% if (site.customConfig.PageMap) { %>
+<!--
+  <PageMap>
+    <DataObject type="action">
+      <Attribute name="label" value="View"/>
+      <Attribute name="url" value="<%= post.link %>"/>
+      <Attribute name="class" value="fullscreen"/>
+    </DataObject>
+  </PageMap>
+-->
+  <% } %>

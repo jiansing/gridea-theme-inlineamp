@@ -1,13 +1,13 @@
 {
   "name": "InlineAMP",
-  "version": "1.2.1",
+  "version": "1.3.0-beta.0",
   "author": "Jiansing",
   "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
   "customConfig": [
     {
       "name": "tagline",
       "label": "顶部标语",
-      "group": "顶部标语区域",
+      "group": "外观",
       "value": true,
       "type": "switch",
       "note": "顶部标语将展示在每个页面顶部"
@@ -15,7 +15,7 @@
     {
       "name": "taglinemain",
       "label": "主标语",
-      "group": "顶部标语区域",
+      "group": "外观",
       "value": "",
       "type": "input",
       "note": "将展示在每个页面顶部"
@@ -23,10 +23,120 @@
     {
       "name": "taglinesub",
       "label": "副标语",
-      "group": "顶部标语区域",
+      "group": "外观",
       "value": "",
       "type": "input",
       "note": "将展示在每个页面顶部"
+    },
+    {
+      "name": "theme",
+      "label": "主题配色方案",
+      "group": "外观",
+      "value": "default",
+      "type": "select",
+      "note": "预置主题配色方案",
+      "options": [
+        {
+          "label": "Default",
+          "value": "default"
+        },
+        {
+          "label": "Fluent-BlueDarker",
+          "value": "fluentblueDarker"
+        },
+        {
+          "label": "自定义配色",
+          "value": "customize"
+        }
+      ]
+    },
+    {
+      "name": "headerbackground",
+      "label": "公共顶部背景色（明亮主题下）",
+      "group": "外观",
+      "value": "#222",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "headerbackgrounddark",
+      "label": "公共顶部背景色（暗黑主题下）",
+      "group": "外观",
+      "value": "#222",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "themecolor",
+      "label": "主题色（明亮主题下）",
+      "group": "外观",
+      "value": "#dbb302",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "themecolordark",
+      "label": "主题色（暗黑主题下）",
+      "group": "外观",
+      "value": "#dbb302",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "headerbackgroundno",
+      "label": "不使用图片作为公共顶部背景",
+      "group": "外观",
+      "value": true,
+      "type": "switch",
+      "note": "不使用图片作为公共顶部背景"
+    },
+    {
+      "name": "headerbackgroundimage",
+      "label": "公共顶部背景图片地址",
+      "group": "外观",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "blogtitle",
+      "label": "Blog 名称颜色",
+      "group": "外观",
+      "value": "#fff",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "taglinemain",
+      "label": "主标语颜色",
+      "group": "外观",
+      "value": "#fff",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "taglinemainafter",
+      "label": "标语分割线颜色",
+      "group": "外观",
+      "value": "#f6f8fa",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "taglinesub",
+      "label": "副标语颜色",
+      "group": "外观",
+      "value": "#8a8a8a",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "customCss",
+      "label": "自定义 CSS（注意 AMP 允许的 CSS 大小为 75,000 byte 以内）",
+      "group": "外观",
+      "value": "",
+      "type": "input",
+      "note": ""
     },
     {
       "name": "avatar",
@@ -42,7 +152,7 @@
       "group": "社会化分享",
       "value": "ampshare",
       "type": "select",
-      "note": "使用AddThis分享请前往：https://www.addthis.com ，获取AddThis相关属性见：https://amp.dev/zh_cn/documentation/components/amp-addthis/",
+      "note": "使用 AddThis 分享请前往：https://www.addthis.com ，获取 AddThis 相关属性见：https://amp.dev/zh_cn/documentation/components/amp-addthis/",
       "options": [
         {
           "label": "无",
@@ -53,7 +163,7 @@
           "value": "ampshare"
         },
         {
-          "label": "AddThis分享",
+          "label": "AddThis 分享",
           "value": "addthis"
         }
       ]
@@ -109,26 +219,62 @@
       "note": "配置Disqus见：https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/",
       "options": [
         {
+          "label": "Gitalk（Beta）",
+          "value": "gitalk"
+        },
+        {
+          "label": "Utterances 评论（Beta）",
+          "value": "utterances"
+        },
+        {
+          "label": "Valine 评论（Beta）",
+          "value": "valine"
+        },
+        {
           "label": "Disqus",
           "value": "disqus"
         },
         {
-          "label": "Facebook评论",
+          "label": "Facebook 评论",
           "value": "facebookcomments"
         }
       ]
     },
     {
-      "name": "disqusurl",
-      "label": "Disqus代码URL",
+      "name": "gitalkurl",
+      "label": "gitalk 代码 URL",
       "group": "评论",
       "value": "",
       "type": "input",
-      "note": "该文件不能与blog使用同一域名（可以使用不同的子域名如cdn.example.com）"
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "disqusurl",
+      "label": "Disqus 代码 URL",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "valineurl",
+      "label": "Valine 代码 URL",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "utterancesurl",
+      "label": "Utterances 代码 URL",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
     },
     {
       "name": "facebookcommentslanguage",
-      "label": "Facebook评论系统语言",
+      "label": "Facebook 评论系统语言",
       "group": "评论",
       "value": "zh_CN",
       "type": "input",
@@ -136,7 +282,7 @@
     },
     {
       "name": "facebookcommentsnumposts",
-      "label": "Facebook评论默认显示出的评论数量",
+      "label": "Facebook 评论默认显示出的评论数量",
       "group": "评论",
       "value": "",
       "type": "input",
@@ -144,7 +290,7 @@
     },
     {
       "name": "facebookcommentscolorscheme",
-      "label": "Facebook评论暗黑模式",
+      "label": "Facebook 评论暗黑模式",
       "group": "评论",
       "value": false,
       "type": "switch",
@@ -152,7 +298,7 @@
     },
     {
       "name": "facebookcommentstime",
-      "label": "Facebook评论按时间顺序排序",
+      "label": "Facebook 评论按时间顺序排序",
       "group": "评论",
       "value": false,
       "type": "switch",
@@ -171,36 +317,26 @@
       "note": "将显示在侧边栏"
     },
     {
-      "name": "video",
-      "label": "HTML5 amp-video标签支持",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "如果需要嵌入视频请开启"
-    },
-    {
-      "name": "audio",
-      "label": "HTML5 amp-audio标签支持",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "如果需要嵌入音频请开启"
-    },
-    {
-      "name": "gist",
-      "label": "HTML5 amp-gist标签支持",
-      "group": "可选模块",
-      "value": true,
-      "type": "switch",
-      "note": "如果需要使用GitHub Gist代码高亮请开启"
-    },
-    {
-      "name": "ampjs",
-      "label": "自定义AMP JS",
-      "group": "可选模块",
-      "value": "",
-      "type": "input",
-      "note": "如需要嵌入第三方内容请在这里填写所需的AMP JS，AMP组件库：https://amp.dev/zh_cn/documentation/components/"
+      "name": "search",
+      "label": "站内搜索",
+      "group": "侧边栏",
+      "value": "googlesearch",
+      "type": "select",
+      "note": "站内搜索小部件",
+      "options": [
+        {
+          "label": "无",
+          "value": "nosearch"
+        },
+        {
+          "label": "Google",
+          "value": "googlesearch"
+        },
+        {
+          "label": "Baidu",
+          "value": "baidusearch"
+        }
+      ]
     },
     {
       "name": "tag",
@@ -211,20 +347,60 @@
       "note": "侧边栏显示所有标签"
     },
     {
-      "name": "search",
-      "label": "Google站内搜索",
-      "group": "侧边栏",
-      "value": true,
-      "type": "switch",
-      "note": "侧边栏Google搜索小部件"
-    },
-    {
       "name": "latestarticles",
       "label": "最近文章",
       "group": "侧边栏",
       "value": true,
       "type": "switch",
       "note": "显示最近文章"
+    },
+    {
+      "name": "metaDescription",
+      "label": "站点描述",
+      "group": "SEO",
+      "value": "",
+      "type": "input",
+      "note": "站点描述"
+    },
+    {
+      "name": "siteImage",
+      "label": "在 Twitter 等社交平台分享链接时将显示此预览图（文章页优先显示封面图），例：https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards",
+      "group": "SEO",
+      "value": "",
+      "type": "picture-upload",
+      "note": ""
+    },
+    {
+      "name": "ldjson",
+      "label": "结构化数据",
+      "group": "SEO",
+      "value": true,
+      "type": "switch",
+      "note": ""
+    },
+    {
+      "name": "ldjsonlogo",
+      "label": "Logo 结构化数据",
+      "group": "SEO",
+      "value": false,
+      "type": "switch",
+      "note": ""
+    },
+    {
+      "name": "ldjsonlogos",
+      "label": "用于结构化数据的 Logo（图片必须至少为 112x112 像素）",
+      "group": "SEO",
+      "value": "",
+      "type": "picture-upload",
+      "note": ""
+    },
+    {
+      "name": "PageMap",
+      "label": "PageMap",
+      "group": "SEO",
+      "value": false,
+      "type": "switch",
+      "note": ""
     },
     {
       "name": "analytics",
@@ -244,16 +420,70 @@
     },
     {
       "name": "ba",
-      "label": "百度统计token",
+      "label": "百度统计 token",
       "group": "统计",
       "value": "",
       "type": "input",
       "note": ""
     },
     {
+      "name": "video",
+      "label": "HTML5 amp-video 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要嵌入视频请开启"
+    },
+    {
+      "name": "audio",
+      "label": "HTML5 amp-audio 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要嵌入音频请开启"
+    },
+    {
+      "name": "gist",
+      "label": "HTML5 amp-gist 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要使用 GitHub Gist 代码高亮请开启"
+    },
+    {
+      "name": "ampjs",
+      "label": "自定义 AMP JS",
+      "group": "其他",
+      "value": "",
+      "type": "input",
+      "note": "如需要嵌入第三方内容请在这里填写所需的 AMP JS，AMP 组件库：https://amp.dev/zh_cn/documentation/components/"
+    },
+    {
+      "name": "update",
+      "label": "主题更新提醒",
+      "group": "其他",
+      "value": "updatebeta",
+      "type": "select",
+      "note": "开启后会在页脚显示主题最新的版本信息及正在使用的版本号",
+      "options": [
+        {
+          "label": "不显示",
+          "value": "noupdate"
+        },
+        {
+          "label": "仅获取最新的稳定版本",
+          "value": "updatestable"
+        },
+        {
+          "label": "获取最新的 beta 版本",
+          "value": "updatebeta"
+        }
+      ]
+    },
+    {
       "name": "lang",
-      "label": "<html> lang属性,默认设置为简体中文(zh-Hans)",
-      "group": "语言",
+      "label": "<html> lang 属性，默认设置为简体中文(zh-Hans)",
+      "group": "其他",
       "value": "zh-Hans",
       "type": "input",
       "note": "默认设置为简体中文"

@@ -94,6 +94,19 @@
         <% if (site.customConfig.comments === 'disqus') { %>
           <%- include('./includes/disqus') %>
           <% } %>
+
+          <% if (site.customConfig.comments === 'gitalk') { %>
+            <%- include('./includes/gitalk') %>
+            <% } %>
+
+            <% if (site.customConfig.comments === 'utterances') { %>
+              <%- include('./includes/utterances') %>
+              <% } %>
+
+              <% if (site.customConfig.comments === 'valine') { %>
+                <%- include('./includes/valine') %>
+                <% } %>
+
           <% if (site.customConfig.comments === 'facebookcomments') { %>
           <%- include('./includes/facebookcomments') %>
           <% } %>

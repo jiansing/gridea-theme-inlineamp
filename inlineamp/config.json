@@ -1,6 +1,6 @@
 {
   "name": "InlineAMP",
-  "version": "1.3.0-beta.0",
+  "version": "1.3.0-beta.1",
   "author": "Jiansing",
   "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
   "customConfig": [
@@ -401,6 +401,14 @@
       "value": false,
       "type": "switch",
       "note": ""
+    },
+    {
+      "name": "pwa",
+      "label": "加载 PWA",
+      "group": "PWA",
+      "value": false,
+      "type": "switch",
+      "note": "加载 PWA"
     },
     {
       "name": "analytics",

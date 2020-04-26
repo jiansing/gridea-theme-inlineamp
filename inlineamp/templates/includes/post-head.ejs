@@ -88,3 +88,5 @@
   <% if (site.customConfig.ampjs) { %>
     <%= site.customConfig.ampjs %>
     <% } %>
+    <% if (site.customConfig.pwa) { %><script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+    <% } %>

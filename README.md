@@ -6,7 +6,25 @@ InlineAMP 是一款纯 [AMP](https://amp.dev/) 主题，设计上简约、干净
 
 下载：https://github.com/jiansing/gridea-theme-inlineamp/releases
 
-预览：https://jiansing.github.io/
+预览：https://gridea-theme-inlineamp.netlify.app/
+
+演示站托管在 netlify 并启用了[AMP 服务器端渲染](https://amp.dev/documentation/guides-and-tutorials/optimize-and-measure/server-side-rendering/)，拥有更快的速度。
+
+## 测速报告：
+### gtmetrix.com
+测速位置：香港   网络：不受限制
+首屏仅需 0.6s
+<iframe src="https://gtmetrix.com/reports/gridea-theme-inlineamp.netlify.app/E494RVXu/video" width="640" height="548" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+测速位置：香港   网络：LTE Mobile (15/10 Mbps, 100ms)
+首屏仅需 1.1s
+<iframe src="https://gtmetrix.com/reports/gridea-theme-inlineamp.netlify.app/J0Xi8LW8/video" width="640" height="548" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+pagespeed insights 报告：https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fgridea-theme-inlineamp.netlify.app
+（手机端分数低是因为延迟加载了视口外的图像，并且我放的几张图像没有压缩过。如果将图片压缩、调整大小分数会更高，但即使用了也不影响首屏的速度）
+
+
+
 
 ## 使用指南
 
